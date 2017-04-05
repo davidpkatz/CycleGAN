@@ -15,10 +15,10 @@ RUN git clone https://github.com/torch/distro.git ~/torch --recursive && \
 
 WORKDIR /$(whoami)/torch
 
-RUN /$(whoami)/torch/install/bin/luarocks install nngraph && \
-	/$(whoami)/torch/install/bin/luarocks install class && \
-	/$(whoami)/torch/install/bin/luarocks install hdf5 && \
-	/$(whoami)/torch/install/bin/luarocks install https://raw.githubusercontent.com/szym/display/master/display-scm-0.rockspec
+RUN ~/torch/install/bin/luarocks install nngraph && \
+	~/torch/install/bin/luarocks install class && \
+	~/torch/install/bin/luarocks install hdf5 && \
+	~/torch/install/bin/luarocks install https://raw.githubusercontent.com/szym/display/master/display-scm-0.rockspec
 
 # Export environment variables manually
 ENV LUA_PATH='/root/.luarocks/share/lua/5.1/?.lua;/root/.luarocks/share/lua/5.1/?/init.lua;/root/torch/install/share/lua/5.1/?.lua;/root/torch/install/share/lua/5.1/?/init.lua;./?.lua;/root/torch/install/share/luajit-2.1.0-beta1/?.lua;/usr/local/share/lua/5.1/?.lua;/usr/local/share/lua/5.1/?/init.lua'
