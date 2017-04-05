@@ -1,6 +1,5 @@
 #!/bin/bash
-DATASETS=("apple2orange" "facades_photo2label" "map2sat" "orange2apple" "style_cezanne" "style_ukiyoe"  "summer2winter_yosemite" "zebra2horse" "facades_label2photo" "horse2zebra" "monet2photo" "sat2map" "style_monet" "style_vangogh" "winter2summer_yosemite")
-
+DATASETS=("ae_photos" "apple2orange" "summer2winter_yosemite" "horse2zebra" "monet2photo" "cezanne2photo" "ukiyoe2photo" "vangogh2photo" "maps" "cityscapes" "facades" "iphone2dslr_flower" "ae_photos")
 for FILE in "${DATASETS[@]}"
 	do
 	URL=https://people.eecs.berkeley.edu/~taesung_park/CycleGAN/datasets/$FILE.zip
