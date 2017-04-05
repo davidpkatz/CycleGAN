@@ -30,6 +30,7 @@ ENV LUA_CPATH='/root/torch/install/lib/?.so;'$LUA_CPATH
 
 RUN git clone https://github.com/davidpkatz/CycleGAN && \
   cd CycleGAN && \
+  chmod +x ./pretrained_models/download_vgg.sh && \
   ./pretrained_models/download_vgg.sh && \
   ./models/download_all_models.sh && \
   ./datasets/download_all_datasets.sh
