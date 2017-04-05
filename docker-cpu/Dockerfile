@@ -28,7 +28,7 @@ ENV LD_LIBRARY_PATH=/root/torch/install/lib:$LD_LIBRARY_PATH
 ENV DYLD_LIBRARY_PATH=/root/torch/install/lib:$DYLD_LIBRARY_PATH
 ENV LUA_CPATH='/root/torch/install/lib/?.so;'$LUA_CPATH
 
-RUN git clone https://github.com/junyanz/CycleGAN && \
+RUN git clone https://github.com/davidpkatz/CycleGAN && \
   cd CycleGAN && \
   ./models/download_all_models.sh && \
   ./datasets/download_all_datasets.sh
