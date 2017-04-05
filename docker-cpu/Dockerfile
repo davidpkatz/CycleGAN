@@ -13,7 +13,7 @@ RUN git clone https://github.com/torch/distro.git ~/torch --recursive && \
     bash install-deps && \
     ./install.sh
 
-WORKDIR /$(whoami)/torch
+WORKDIR ~/torch
 
 RUN ~/torch/install/bin/luarocks install nngraph && \
 	~/torch/install/bin/luarocks install class && \
@@ -30,5 +30,6 @@ ENV LUA_CPATH='/root/torch/install/lib/?.so;'$LUA_CPATH
 
 RUN git clone https://github.com/davidpkatz/CycleGAN && \
   cd CycleGAN && \
+  ./models/download_vgg.sh && \
   ./models/download_all_models.sh && \
   ./datasets/download_all_datasets.sh
